@@ -1,0 +1,57 @@
+body{
+	font-family: "Georgia", "Times New Roman", Times, Serif;
+	text-rendering: optimizeLegibility
+	font-size: 16px;
+	color: #333;
+}
+.container{
+	max-width: 800px;
+	margin: 0 auto;
+}
+blockquote p {
+	margin: 1em 0;
+	line-height: 1.6;
+	font-size: 16px;
+}
+blockquote {
+	border-left: 5px solid #EEE;
+	padding: 0 0 0 15px;
+	margin: 0 0 20px;
+}
+a{ text-decoration: none; color: #08c; }
+.author a.authorlink { font-weight: bold; }
+a:hover { text-decoration: underline; }
+blockquote.author { border-left-color: #08C; }
+blockquote small { color: #AAA; }
+blockquote small a { color: inherit; }
+blockquote small::before{
+	content: '\2014 \00A0'
+}
+a.time{
+	float: right;
+	font-style: italic;
+}
+
+h1{
+	font-size: 38.5px;
+	margin: .67em 0;
+	line-height: 40px;
+}
+.page-header {
+	//border-bottom: 1px solid #EEE;
+	margin-bottom: 2em;
+	text-align: center;
+}
+.page-header a {
+	display: block;
+	margin: 1em 0;
+}
+hr {
+	margin: 20px 0;
+	border: 0;
+	border-top: 1px solid #EEE;
+	border-bottom: 1px solid white;
+}
+.bold{
+	font-weight: bold;
+}

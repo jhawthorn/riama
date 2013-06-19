@@ -1,0 +1,14 @@
+
+<h1><%= header.title %></h1>
+
+<%= link_to 'original (reddit.com)', header.url %>
+
+<blockquote class="header author">
+  <%= markdown(header.selftext) %>
+  <small>
+    <%= link_to header.author, "http://www.reddit.com/u/#{header.author}", class: 'authorlink' %>
+    <%= "(%+i)" % header.score %>
+    <%#= link_to comment.created, comment.permalink, class: 'time' %>
+  </small>
+</blockquote>
+

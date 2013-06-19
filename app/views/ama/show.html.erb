@@ -1,0 +1,12 @@
+
+<%= link_to root_path do %>
+  &laquo; All posts
+<% end %>
+
+<%= render 'ama/header', header: @post.header %>
+<hr/>
+<% @post.comments.each do |comment| %>
+  <%= render 'ama/comment', comment: comment %>
+  <hr/>
+<% end %>
+

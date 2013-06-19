@@ -1,0 +1,11 @@
+
+<%= link_to 'hot', {sort: nil},   class: ('bold' if @sort == 'hot') %>
+<%= link_to 'new', {sort: 'new'}, class: ('bold' if @sort == 'new') %>
+<%= link_to 'top', {sort: 'top'}, class: ('bold' if @sort == 'top') %>
+
+<h1><%= @sort.titleize %> posts from <%= link_to '/r/iama', 'http://www.reddit.com/r/IAmA/' %></h1>
+
+<% @posts.each do |post| %>
+  <h3><%= link_to post.title, post.id %></h3>
+<% end %>
+

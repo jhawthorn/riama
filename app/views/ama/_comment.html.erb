@@ -1,0 +1,14 @@
+
+<blockquote class="<%= 'author' if @author == comment.author %>">
+  <%= markdown(comment.body) %>
+  <small>
+    <%= link_to comment.author, "http://www.reddit.com/u/#{comment.author}", class: 'authorlink' %>
+    <%= "(%+i)" % comment.score %>
+    <%= link_to comment.created, comment.permalink, class: 'time' %>
+  </small>
+</blockquote>
+
+<% comment.replies.each do |reply| %>
+  <%= render 'ama/comment', comment: reply %>
+<% end %>
+
