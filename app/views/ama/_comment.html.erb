@@ -4,7 +4,7 @@
   <small>
     <%= link_to comment.author, "http://www.reddit.com/u/#{comment.author}", class: 'authorlink' %>
     <%= "(%+i)" % comment.score %>
-    <%= link_to comment.created, comment.permalink, class: 'time' %>
+    <%= link_to comment.created.to_s(:short), comment.permalink, class: 'time' %>
   </small>
 </blockquote>
 
