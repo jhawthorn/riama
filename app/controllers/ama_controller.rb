@@ -4,11 +4,11 @@ class AmaController < ApplicationController
     @sort = params[:sort] || 'hot'
     url = case @sort
           when 'new'
-            "http://www.reddit.com/r/IAmA/new.json"
+            "http://www.reddit.com/r/IAmA/new.json?limit=100"
           when 'top'
-            "http://www.reddit.com/r/IAmA/top.json?sort=top&t=all"
+            "http://www.reddit.com/r/IAmA/top.json?limit=100&sort=top&t=all"
           else
-            "http://www.reddit.com/r/IAmA/.json"
+            "http://www.reddit.com/r/IAmA/.json?limit=100"
           end
     @posts = Reddit.parse_url(url)
   end
