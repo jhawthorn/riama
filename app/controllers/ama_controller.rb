@@ -11,6 +11,7 @@ class AmaController < ApplicationController
             "http://www.reddit.com/r/IAmA/.json?limit=100"
           end
     @posts = Reddit.parse_url(url)
+    @posts.reject!{|post| post.title =~ /AMA request/i || post.title =~ /^request/i }
   end
 
   def show
